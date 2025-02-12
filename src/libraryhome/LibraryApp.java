@@ -1,10 +1,25 @@
 package libraryhome;
 
+import libraryinfo.Library;
+
 public class LibraryApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("This is an edited statement");
+
+	/**
+	 * Library object is created out of Library
+	 */
+	Library library = new Library();
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 
 }
