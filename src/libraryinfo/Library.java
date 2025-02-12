@@ -39,6 +39,9 @@ public class Library {
 	
 		//searching the ISBN method implement
 	public Book searchByISBN(String ISBN) {
+		if(ISBN == null) {
+			return null;
+		}
 		for(int i = 0; i < count; i++) {
 			if (books[i].getISBN().equals(ISBN)) {
 				return books[i];
