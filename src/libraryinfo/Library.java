@@ -12,42 +12,46 @@ public class Library {
 		this.count = 0;
 	}
 	
-	//method to add a book
+		//method to add a book
 	public boolean addBook(Book book) {
-	if (count < books.length) {
-		books[count] = book;
-		count++;
-		return true;
-	}
-	return false;
-}
-	
-	//method to delete a book from the system
-	public boolean removeBook(Book book) {
-	for(int i = 0; i < count; i++) {
-		if (books[i].equals(book)){
-			books[i] = books[count - 1];
-			books[count - 1] = null;
-			count--;
+		if (count < books.length) {
+			books[count] = book;
+			count++;
 			return true;
 		}
+		return false;
 	}
-	System.out.println("Cannot Remove book: " + book + "book does not exist");
-	return false;
-}
+	
+		//method to delete a book from the system
+	public boolean removeBook(Book book) {
+		for(int i = 0; i < count; i++) {
+			if (books[i].equals(book)){
+				books[i] = books[count - 1];
+				books[count - 1] = null;
+				count--;
+				return true;
+			}
+		}
+		System.out.println("Cannot Remove book: " + book + "book does not exist");
+		return false;
+	}
 	
 	
-	//searching the ISBN method implement
+		//searching the ISBN method implement
 	public Book searchByISBN(String ISBN) {
-	for(int i = 0; i < count; i++) {
-		if (books[i].getISBN().equals(ISBN)) {
-			return books[i];
+		for(int i = 0; i < count; i++) {
+			if (books[i].getISBN().equals(ISBN)) {
+				return books[i];
+			}
+		}
+		return null;
+	}
+	
+	
+		//display library method
+	public void displayBooks() {
+		for(int i = 0; i < count; i++) {
+			System.out.println((i + 1) + ". " + books[i]);
 		}
 	}
-	return null;
-}
-	
-
-	
-	
 }
