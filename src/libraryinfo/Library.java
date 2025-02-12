@@ -70,6 +70,7 @@ public class Library {
 	*/
 	public Book searchByISBN(String ISBN) {
 		if(ISBN == null) {
+			System.out.println("Book doesn't exist");
 			return null;
 		}
 		for(int i = 0; i < count; i++) {
@@ -77,6 +78,7 @@ public class Library {
 				return books[i];
 			}
 		}
+		System.out.println("Book doesn't exist");
 		return null;
 	}
 	
