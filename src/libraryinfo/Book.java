@@ -4,6 +4,6 @@ public class Book {
 	String title = "_";
 	String author = "_";
 	String ISBN = "_";
-	String price ="_";
+	double price = 0.0;
 	//test test
 }
