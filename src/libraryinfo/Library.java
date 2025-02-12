@@ -12,7 +12,15 @@ public class Library {
 		this.count = 0;
 	}
 	
-	
+	//method to add a book
+	public boolean addBook(Book book) {
+	if (count < books.length) {
+		books[count] = book;
+		count++;
+		return true;
+	}
+	return false;
+}
 	
 	
 	
