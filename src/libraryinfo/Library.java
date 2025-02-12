@@ -31,6 +31,7 @@ public class Library {
 		if (count < books.length) {
 			books[count] = book;
 			count++;
+			System.out.println("Book added successfully");
 			return true;
 		}
 		return false;
