@@ -22,7 +22,32 @@ public class Library {
 	return false;
 }
 	
+	//method to delete a book from the system
+	public boolean removeBook(Book book) {
+	for(int i = 0; i < count; i++) {
+		if (books[i].equals(book)){
+			books[i] = books[count - 1];
+			books[count - 1] = null;
+			count--;
+			return true;
+		}
+	}
+	System.out.println("Cannot Remove book: " + book + "book does not exist");
+	return false;
+}
 	
+	
+	//searching the ISBN method implement
+	public Book searchByISBN(String ISBN) {
+	for(int i = 0; i < count; i++) {
+		if (books[i].getISBN().equals(ISBN)) {
+			return books[i];
+		}
+	}
+	return null;
+}
+	
+
 	
 	
 }
