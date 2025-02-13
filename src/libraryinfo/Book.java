@@ -116,4 +116,13 @@ public class Book {
 		return "book" + Title + Author + ISBN + Price;
 	}
 	
+	public boolean equals(Book Book1, Book Book2) {
+		
+		if(Book1.getISBN(Book2) == Book2.getISBN(Book2)) {
+			
+		return true;
+		}
+		else
+		return false;
+	}
 }
