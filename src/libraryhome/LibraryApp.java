@@ -10,9 +10,12 @@ public class LibraryApp {
 		
 		
 		Book obj = new Book();
-		System.out.println(obj.getTitle(obj));
+		obj.bookPrint(obj);
 		obj.setTitle(obj, "Return of the King");
-		System.out.println(obj.getTitle(obj));
+		obj.setAuthor(obj, "Tolkien");
+		obj.setISBN(obj, "abc123");
+		obj.setPrice(obj, 50.07);
+		obj.bookPrint(obj);
 		//Book.NewBook(null);
 		//Book.SetBook("Return of the king", "Tolkien", "123abc", , 0);
 	}

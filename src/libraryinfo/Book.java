@@ -22,7 +22,7 @@ public class Book {
 	
 	public static void NewBook(String[] args) {
 		
-		Book obj = new Book();
+		//Book obj = new Book();
 		
 		
 		
@@ -68,5 +68,26 @@ public class Book {
 	
 	BookName.Title = Title;
 	
+	}
+	public void setAuthor(Book BookName, String Author) {
+		
+		
+		BookName.Author = Author;
+	}
+	public void setISBN(Book BookName, String ISBN) {
+		BookName.ISBN = ISBN;
+		
+	}
+	public void setPrice(Book BookName, Double Price) {
+		
+		BookName.Price = Price;
+	}
+	public void bookPrint(Book BookName) {
+	
+		System.out.println(BookName.getTitle(BookName));
+		System.out.println(BookName.getAuthor(BookName));
+		System.out.println(BookName.getISBN(BookName));
+		System.out.println(BookName.getPrice(BookName));
+		
 	}
 }
