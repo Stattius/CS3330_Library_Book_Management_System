@@ -93,7 +93,7 @@ public class Book {//book class
 		this.ISBN = ISBN;
 		
 	}
-	public void setPrice(Double price) { //set price method
+	public void setPrice(double price) { //set price method
 		
 		this.price = price;
 	}
@@ -105,7 +105,7 @@ public class Book {//book class
 		System.out.println(this.getPrice());
 		
 	}
-	public void setBook( String Title, String Author, String ISBN,Double Price) {//set book method
+	public void setBook( String Title, String Author, String ISBN,double Price) {//set book method
 	
 		this.setTitle(Title);
 		
@@ -123,13 +123,18 @@ public class Book {//book class
 		return title +" by " + author + " (ISBN:"+ISBN +", "+price+")";
 	}
 	
-	public boolean equals(Book Book) {//equals boolean
+	public boolean equals(Object obj) {//equals boolean
 		
-		if(Book.getISBN() == this.getISBN()) {
-			
-		return true;
-		}
-		else
-		return false;
+		if(obj== null) {return false;
+		
 	}
+		Book book = (Book) obj;
+		
+		if(this == obj)	{
+			return true;
+		}
+		
+		return this.ISBN.equals(book.ISBN);
+	}
+		
 }
