@@ -1,6 +1,7 @@
 package libraryhome;
 
 import libraryinfo.Library;
+import libraryinfo.Book;
 
 public class LibraryApp {
 
