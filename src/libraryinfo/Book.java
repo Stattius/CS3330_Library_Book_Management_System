@@ -123,9 +123,9 @@ public class Book {//book class
 		return "book" + title + author + ISBN + price;
 	}
 	
-	public boolean equals(Book Book1, Book Book2) {//equals boolean
+	public boolean equals(Book Book) {//equals boolean
 		
-		if(Book1.getISBN() == Book2.getISBN()) {
+		if(Book.getISBN() == this.getISBN()) {
 			
 		return true;
 		}
