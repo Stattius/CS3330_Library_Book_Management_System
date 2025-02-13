@@ -10,18 +10,18 @@ public class LibraryApp {
 		
 		
 		Book obj = new Book();
-		obj.bookPrint(obj);
-		obj.setTitle(obj, "Return of the King");
-		obj.setAuthor(obj, "Tolkien");
-		obj.setISBN(obj, "abc123");
-		obj.setPrice(obj, 50.07);
-		obj.bookPrint(obj);
+		obj.bookPrint();
+		obj.setTitle("Return of the King");
+		obj.setAuthor( "Tolkien");
+		obj.setISBN("abc123");
+		obj.setPrice( 50.07);
+		obj.bookPrint();
 		
 		Book obj2 = new Book();
-		obj2.setBook(obj2,"The Blade itself", "Abercrombie", "efg456", 52.45);
-		obj2.bookPrint(obj2);
+		obj2.setBook("The Blade itself", "Abercrombie", "efg456", 52.45);
+		obj2.bookPrint();
 		Book copy = new Book(obj);
-		copy.bookPrint(copy);
+		copy.bookPrint();
 		String S1 = copy.toString();
 		System.out.println(copy.toString());
 		//Book.NewBook(null);

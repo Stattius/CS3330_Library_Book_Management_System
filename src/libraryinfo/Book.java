@@ -1,10 +1,10 @@
 package libraryinfo;
 
 public class Book {//book class
-	String Title ;
-	String Author ;
+	String title ;
+	String author ;
 	String ISBN ;
-	double Price ;
+	double price ;
 	//test test
 
 
@@ -13,21 +13,28 @@ public class Book {//book class
 		
 		
 		String Set ="Unknown";
-		Title = Set;
-		Author = Set;
+		title = Set;
+		author = Set;
 		ISBN = Set;
-		Price = 0.0;
+		price = 0.0;
 	}
 	public Book(Book BookName) {//copy constructor 
 		
-		 Title = BookName.getTitle(BookName);
-		 Author = BookName.getAuthor(BookName);
-		 ISBN = BookName.getISBN(BookName);
-		 Price = BookName.getPrice(BookName);
+		 title = BookName.getTitle();
+		 author = BookName.getAuthor();
+		 ISBN = BookName.getISBN();
+		 price = BookName.getPrice();
 		
 		
 	}
-	
+	public Book(String title, String author, String ISBN, double price) {
+		
+		this.title = title;
+		this.author = author;
+		this.ISBN = ISBN;
+		this.price = price;
+		
+	}
 	//public static void NewBook(String[] args) {
 		
 		//Book obj = new Book();
@@ -47,78 +54,78 @@ public class Book {//book class
 		
 	}*/	
 	
-	public String getTitle(Book BookName) {//get title method
+	public String getTitle() {//get title method
 		
 		
 		
 		
-		return BookName.Title;
+		return title;
 	}
 	
-	public String getAuthor(Book BookName) {//get author method
+	public String getAuthor() {//get author method
 		
 		
-		return BookName.Author;
+		return author;
 	}
 	
-	public String getISBN(Book BookName) {//get ISBN method
+	public String getISBN() {//get ISBN method
 		
 		
-		return BookName.ISBN;
+		return ISBN;
 	}
 	
-	public double getPrice(Book BookName) {//get Price method
+	public double getPrice() {//get Price method
 		
-		return BookName.Price;
+		return price;
 	}
 	
-	public void setTitle(Book BookName, String Title) {//set title method
+	public void setTitle(String title) {//set title method
 	
-	BookName.Title = Title;
+	this.title = title;
 	
 	}
-	public void setAuthor(Book BookName, String Author) {//set author method
+	public void setAuthor(String author) {//set author method
 		
 		
-		BookName.Author = Author;
+		this.author = author;
 	}
-	public void setISBN(Book BookName, String ISBN) {//set ISBN method
-		BookName.ISBN = ISBN;
+	public void setISBN( String ISBN) {//set ISBN method
+		this.ISBN = ISBN;
 		
 	}
-	public void setPrice(Book BookName, Double Price) { //set price method
+	public void setPrice(Double price) { //set price method
 		
-		BookName.Price = Price;
+		this.price = price;
 	}
-	public void bookPrint(Book BookName) {//bookprint method
+	public void bookPrint() {//bookprint method
 	
-		System.out.println(BookName.getTitle(BookName));
-		System.out.println(BookName.getAuthor(BookName));
-		System.out.println(BookName.getISBN(BookName));
-		System.out.println(BookName.getPrice(BookName));
+		System.out.println(this.getTitle());
+		System.out.println(this.getAuthor());
+		System.out.println(this.getISBN());
+		System.out.println(this.getPrice());
 		
 	}
-	public void setBook(Book BookName, String Title, String Author, String ISBN,Double Price) {//set book method
+	public void setBook( String Title, String Author, String ISBN,Double Price) {//set book method
 	
-		BookName.setTitle(BookName, Title);
+		this.setTitle(Title);
 		
-		BookName.setAuthor(BookName, Author);
+		this.setAuthor( Author);
 		
-		BookName.setISBN(BookName, ISBN);
+		this.setISBN(ISBN);
 		
-		BookName.setPrice(BookName, Price);
+		this.setPrice(Price);
 		
 		
 	
 	}
 	public String toString() {//string method
 		
-		return "book" + Title + Author + ISBN + Price;
+		return "book" + title + author + ISBN + price;
 	}
 	
 	public boolean equals(Book Book1, Book Book2) {//equals boolean
 		
-		if(Book1.getISBN(Book2) == Book2.getISBN(Book2)) {
+		if(Book1.getISBN() == Book2.getISBN()) {
 			
 		return true;
 		}
