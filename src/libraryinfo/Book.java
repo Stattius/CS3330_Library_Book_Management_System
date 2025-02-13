@@ -120,7 +120,7 @@ public class Book {//book class
 	}
 	public String toString() {//string method
 		
-		return "book" + title + author + ISBN + price;
+		return title +" by " + author + " (ISBN:"+ISBN +", "+price+")";
 	}
 	
 	public boolean equals(Book Book) {//equals boolean
