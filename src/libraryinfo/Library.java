@@ -89,7 +89,7 @@ public class Library {
 	*/
 	public void displayBooks() {
 		for(int i = 0; i < count; i++) {
-			System.out.println((i + 1) + ". " + books[i]);
+			System.out.println((i + 1) + ". " + books[i].toString());
 		}
 	}
 }
