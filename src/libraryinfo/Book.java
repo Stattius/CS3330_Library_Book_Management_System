@@ -90,4 +90,17 @@ public class Book {
 		System.out.println(BookName.getPrice(BookName));
 		
 	}
+	public void setBook(Book BookName, String Title, String Author, String ISBN,Double Price) {
+	
+		BookName.setTitle(BookName, Title);
+		
+		BookName.setAuthor(BookName, Author);
+		
+		BookName.setISBN(BookName, ISBN);
+		
+		BookName.setPrice(BookName, Price);
+		
+		
+	
+	}
 }

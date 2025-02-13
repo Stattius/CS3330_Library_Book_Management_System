@@ -16,6 +16,10 @@ public class LibraryApp {
 		obj.setISBN(obj, "abc123");
 		obj.setPrice(obj, 50.07);
 		obj.bookPrint(obj);
+		
+		Book obj2 = new Book();
+		obj2.setBook(obj2,"The Blade itself", "Abercrombie", "efg456", 52.45);
+		obj2.bookPrint(obj2);
 		//Book.NewBook(null);
 		//Book.SetBook("Return of the king", "Tolkien", "123abc", , 0);
 	}
