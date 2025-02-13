@@ -18,7 +18,15 @@ public class Book {
 		ISBN = Set;
 		Price = 0.0;
 	}
-	
+	public Book(Book BookName) {
+		
+		 Title = BookName.getTitle(BookName);
+		 Author = BookName.getAuthor(BookName);
+		 ISBN = BookName.getISBN(BookName);
+		 Price = BookName.getPrice(BookName);
+		
+		
+	}
 	
 	public static void NewBook(String[] args) {
 		
@@ -103,4 +111,5 @@ public class Book {
 		
 	
 	}
+	
 }
