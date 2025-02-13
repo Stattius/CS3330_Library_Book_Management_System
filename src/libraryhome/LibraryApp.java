@@ -22,6 +22,8 @@ public class LibraryApp {
 		obj2.bookPrint(obj2);
 		Book copy = new Book(obj);
 		copy.bookPrint(copy);
+		String S1 = copy.toString();
+		System.out.println(copy.toString());
 		//Book.NewBook(null);
 		//Book.SetBook("Return of the king", "Tolkien", "123abc", , 0);
 	}

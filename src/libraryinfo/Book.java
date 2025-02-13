@@ -111,5 +111,9 @@ public class Book {
 		
 	
 	}
+	public String toString() {
+		
+		return "book" + Title + Author + ISBN + Price;
+	}
 	
 }
